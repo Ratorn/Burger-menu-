@@ -1,0 +1,63 @@
+* {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.burger_block {
+    display: flex;
+    justify-content: center;
+}
+.block {
+    width: 500px;
+    height: 500px;
+    background: green;
+    margin-top: 200px;
+}
+.batko_burger {
+    height: 80px;
+    width: 80px;
+    transition: 0.5s;
+    position: relative;
+    border: 2px solid orange;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+.burger {
+    position: absolute;
+    width: 40px;
+    height: 5px;
+    top: 35px;
+    left: 20px;
+    background: orange;
+    transition: 0.5s;
+}
+.burger::after {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 5px;
+    top: -12px;
+    transition: 0.5s;
+    background: orange;
+}
+.burger::before {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 5px;
+    top: 12px;
+    transition: 0.5s;
+    background: orange;
+}
+.batko_burger:hover .burger::after{
+    transform: rotate(-45deg);
+    top: 0;
+}
+.batko_burger:hover .burger::before{
+    transform: rotate(45deg);
+    top: 0;
+}
+.batko_burger:hover .burger {
+    background: green;
+}
